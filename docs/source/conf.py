@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'TGen Jetstream Docs'
+copyright = '2021, TGen'
+author = 'bryce-turner'
 
 release = '0.1'
 version = '0.1.0'
