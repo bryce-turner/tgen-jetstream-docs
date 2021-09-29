@@ -1,9 +1,9 @@
-Template for the Read the Docs tutorial
-=======================================
+Welcome to Jetstream's documentation!
+=====================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+**Jetstream** is a pipeline development framework written as a pure Python package
+and command-line utility. It supports complex workflows modeled as directed-
+acyclic graphs (DAGs), and execution on batch schedulers (Slurm).
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Check out the :doc:`usage` section for further information, including
+how to :ref:`installation` the project.
