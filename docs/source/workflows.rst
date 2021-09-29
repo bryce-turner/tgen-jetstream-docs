@@ -2,7 +2,7 @@ Workflows
 =========
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    phoenix/phoenix
    coyote/coyote
