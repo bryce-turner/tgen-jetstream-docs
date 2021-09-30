@@ -25,15 +25,11 @@ Somatic
 SNV Calling
 ===========
 
-.. _lancet:
-
 Lancet
 ------
 
 .. raw:: html
     :file: workflows/embed/Somatic_Lancet.html
-
-.. _mutect:
 
 Mutect2
 -------
@@ -41,23 +37,17 @@ Mutect2
 .. raw:: html
     :file: workflows/embed/Somatic_Mutect2.html
 
-.. _octopus:
-
 Octopus
 -------
 
 .. raw:: html
     :file: workflows/embed/Somatic_Octopus.html
 
-.. _strelka:
-
 Strelka2
 --------
 
 .. raw:: html
     :file: workflows/embed/Somatic_Strelka2.html
-
-.. _vardict:
 
 VarDict
 -------
