@@ -20,3 +20,4 @@ Contents
 
    usage
    workflows
+   jetstream_centro/centro
