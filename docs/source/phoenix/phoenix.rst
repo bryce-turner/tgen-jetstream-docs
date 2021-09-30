@@ -29,28 +29,28 @@ Lancet
 ------
 
 .. raw:: html
-    :file: workflows/embed/Somatic_Lancet.html
+    :file: workflows/embed/Somatic_Lancet.svg
 
 Mutect2
 -------
 
 .. raw:: html
-    :file: workflows/embed/Somatic_Mutect2.html
+    :file: workflows/embed/Somatic_Mutect2.svg
 
 Octopus
 -------
 
 .. raw:: html
-    :file: workflows/embed/Somatic_Octopus.html
+    :file: workflows/embed/Somatic_Octopus.svg
 
 Strelka2
 --------
 
 .. raw:: html
-    :file: workflows/embed/Somatic_Strelka2.html
+    :file: workflows/embed/Somatic_Strelka2.svg
 
 VarDict
 -------
 
 .. raw:: html
-    :file: workflows/embed/Somatic_Vardict.html
+    :file: workflows/embed/Somatic_Vardict.svg
