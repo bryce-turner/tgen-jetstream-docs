@@ -94,3 +94,32 @@ then we can simply paste the completed json. Otherwise, we can use the template
 :download:`workbook <https://github.com/tgen/jetstream_centro/raw/master/pipeline_management/static/pipeline_management/Phoenix-ProjectSetup_v1.0.xlsx>`.
 
 .. image:: _images/jetstream_centro_custom.png
+
+
+Curl API Submission
+-------------------
+
+Jetstream Centro also supports REST API based submissions, we get a small preview of
+this on the API page. Using ``curl`` we can post json submissions directly to the
+server from the CLI.
+
+This is very useful in the case where we have multiple jsons already generated or
+if we would like perform submissions in a scripted manner. To get started, we must
+have valid user credentials.
+
+.. code-block:: console
+
+  $ curl --request POST --user username:password --header "Content-type: application/json" -d @example.json http://jetstream.centro.host.url:8000/api/v1/new-run/
+
+Let's break down the different options to avoid submission errors:
+
+- ``--request POST`` we are telling the API that we would like to post/add a new run.
+- ``--user username:password`` user credentials of the user submitting the new run.
+
+  - If the username or password is complex, e.g. using characters that bash might interpret, then it is suggested to wrap in single quotes.
+  - It is also recommended to use a protected file that only the user can read.
+
+- ``--header "Content-type: application/json"`` defining the content type we are posting.
+- ``-d @example.json`` path to the submission json.
+- ``http://jetstream.centro.host.url:8000/api/v1/new-run/`` address of where jetstream centro
+  is hosted. Can be anything, and the port might be something other than 8000.
