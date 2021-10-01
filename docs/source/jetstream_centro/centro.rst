@@ -93,7 +93,16 @@ checks to make the json is formatted appropriately. If we already have a json re
 then we can simply paste the completed json. Otherwise, we can use the template
 :download:`workbook <https://github.com/tgen/jetstream_centro/raw/master/pipeline_management/static/pipeline_management/Phoenix-ProjectSetup_v1.0.xlsx>`.
 
-.. image:: _images/jetstream_centro_custom.png
+**Copy-Paste submission example:**
+
+.. figure:: _images/copy-paste-submission.gif
+   :alt: copy paste centro submission
+
+
+**Excel sheet submssion example:**
+
+.. figure:: _images/excel-submission.gif
+  :alt: excel centro submission
 
 
 Curl API Submission
@@ -104,22 +113,55 @@ this on the API page. Using ``curl`` we can post json submissions directly to th
 server from the CLI.
 
 This is very useful in the case where we have multiple jsons already generated or
-if we would like perform submissions in a scripted manner. To get started, we must
-have valid user credentials.
+if we would like perform submissions in a scripted manner. To get started, we have
+two options:
+
+User credentials over CLI
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
-  $ curl --request POST --user username:password --header "Content-type: application/json" -d @example.json http://jetstream.centro.host.url:8000/api/v1/new-run/
+  $ curl --request POST --user 'username:password' --header "Content-type: application/json" -d @example.json http://jetstream.centro.host.url:8000/api/v1/new-run/
 
-Let's break down the different options to avoid submission errors:
+Let's break down the different options:
 
-- ``--request POST`` we are telling the API that we would like to post/add a new run.
-- ``--user username:password`` user credentials of the user submitting the new run.
-
-  - If the username or password is complex, e.g. using characters that bash might interpret, then it is suggested to wrap in single quotes.
-  - It is also recommended to use a protected file that only the user can read.
-
-- ``--header "Content-type: application/json"`` defining the content type we are posting.
+- ``--request POST`` tells the API that we would like to post/add a new run.
+- ``--user 'username:password'`` user credentials of the user submitting the new run, we wrap this
+  in single quotes to avoid bash expansion/interpretation.
+- ``--header "Content-type: application/json"`` defines the content type we are posting.
 - ``-d @example.json`` path to the submission json.
-- ``http://jetstream.centro.host.url:8000/api/v1/new-run/`` address of where jetstream centro
+- ``http://jetstream.centro.host.url:8000/api/v1/new-run/`` url address of where jetstream centro
+  is hosted. Can be anything, and the port might be something other than 8000.
+
+
+Use netrc-file
+^^^^^^^^^^^^^^
+
+Passing username and password over CLI is bad practice, instead, if using curl >= 7.21.5 then you should
+consider using ``--netrc-file <filename>``. To do so we need to create a file with the following formatting:
+
+.. code-block::
+
+  machine jetstream.centro.host.url
+  login <username>
+  password <password>
+
+This can be placed anywhere, but it makes sense to put it close to the user home directory.
+Also with respect to security, make sure it is only read/write by your user, for instance use
+``chmod 600 ~/path/to/centro.netrc``. Check out this helpful `.netrc documentation
+<https://everything.curl.dev/usingcurl/netrc>`_ for more info on netrc with respect to curl.
+
+In this case, the command would be similar to as follows:
+
+.. code-block:: console
+
+  $ curl --request POST --netrc-file ~/path/to/centro.netrc --header "Content-type: application/json" -d @example.json http://jetstream.centro.host.url:8000/api/v1/new-run/
+
+Breaking down the different options:
+
+- ``--request POST`` tells the API that we would like to post/add a new run.
+- ``--netrc-file ~/path/to/centro.netrc`` netrc file we created earlier, contains user credentials.
+- ``--header "Content-type: application/json"`` defines the content type we are posting.
+- ``-d @example.json`` path to the submission json.
+- ``http://jetstream.centro.host.url:8000/api/v1/new-run/`` url address of where jetstream centro
   is hosted. Can be anything, and the port might be something other than 8000.
