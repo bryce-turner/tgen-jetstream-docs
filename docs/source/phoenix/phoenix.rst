@@ -177,27 +177,27 @@ DNA Alignment
 TGen
 ----
 
-.. figure:: workflows/embed/Alignment_bwa_mem_samtools.svg
+.. figure:: workflows/alignment/Alignment_bwa_mem_samtools.svg
 
 TGen PCRfree
 ------------
 
-.. figure:: workflows/embed/Alignment_bwa_mem2_samtools.svg
+.. figure:: workflows/alignment/Alignment_bwa_mem2_samtools.svg
 
 Broad
 -----
 
-.. figure:: workflows/embed/Alignment_bwa_mem_gatk_broad.svg
+.. figure:: workflows/alignment/Alignment_bwa_mem_gatk_broad.svg
 
 Parabricks
 ----------
 
-.. figure:: workflows/embed/Alignment_pb_fq2bam.svg
+.. figure:: workflows/alignment/Alignment_pb_fq2bam.svg
 
 Ashion
 ------
 
-.. figure:: workflows/embed/Alignment_bwa_mem_samblaster_sambamba.svg
+.. figure:: workflows/alignment/Alignment_bwa_mem_samblaster_sambamba.svg
 
 
 
@@ -207,24 +207,24 @@ Somatic SNV Calling
 Lancet
 ------
 
-.. figure:: workflows/embed/Somatic_Lancet.svg
+.. figure:: workflows/somatic/Somatic_Lancet.svg
 
 Mutect2
 -------
 
-.. figure:: workflows/embed/Somatic_Mutect2.svg
+.. figure:: workflows/somatic/Somatic_Mutect2.svg
 
 Octopus
 -------
 
-.. figure:: workflows/embed/Somatic_Octopus.svg
+.. figure:: workflows/somatic/Somatic_Octopus.svg
 
 Strelka2
 --------
 
-.. figure:: workflows/embed/Somatic_Strelka2.svg
+.. figure:: workflows/somatic/Somatic_Strelka2.svg
 
 VarDict
 -------
 
-.. figure:: workflows/embed/Somatic_Vardict.svg
+.. figure:: workflows/somatic/Somatic_Vardict.svg
