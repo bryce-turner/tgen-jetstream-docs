@@ -35,5 +35,10 @@ html_theme_options = {
     "navigation_depth": 5
 }
 
+html_static_path = ['_static']
+
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+def setup(app):
+    app.add_css_file('custom.css')
