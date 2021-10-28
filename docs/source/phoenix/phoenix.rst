@@ -24,15 +24,15 @@ We are consistently working towards bringing the most efficient workflow to the 
 utilizing NA12878.
 
 
-DNA Alignment
-=============
+Benchmarking DNA Alignment
+==========================
 
 We currently allow for **five** different alignment workflows. All supporting whether or not we run base recalibration. We will also compare results
 with and without base recalibration.
 
 
-Duplicate Marking
------------------
+Benchmarking Duplicate Marking
+------------------------------
 
 Our prep of NA12878 is PCRfree, meaning marked duplicates should be platform duplicates. Additionally, we've noticed some weird behavior with
 Samtools duplicate marking in which these take much longer to run than expected, so we will also compare the "--no-multi-dup" option results,
@@ -69,8 +69,8 @@ represented with :sup:`nmd`.
 NR Signifies that the metric was not reported in the stats file. Also worth noting that the Ashion workflow uses samblaster, which does not output
 a stats file.
 
-Constitutional SNV Calling
-==========================
+Benchmarking Constitutional SNV Calling
+=======================================
 
 We have a handful of callers at our disposal. Here we make some recommendations along with benchmarks behind those recommendations. In most cases,
 deepvariant is the best caller, and it's important to note how these results could change depending on the alignment style used:
@@ -293,6 +293,16 @@ vcfMerger2
 ----------
 
 .. figure:: workflows/somatic/Somatic_vcfMerger.svg
+
+add RNA header to vcf
+---------------------
+
+.. figure:: workflows/somatic/Somatic_add_rna_header_to_vcf.svg
+
+add matched rna
+---------------
+
+.. figure:: workflows/somatic/Somatic_add_matched_rna.svg
 
 --------------------------------------------------------------------------------
 
